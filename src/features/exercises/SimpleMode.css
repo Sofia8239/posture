@@ -1,0 +1,89 @@
+.simple-mode-page {
+  padding: 32px;
+  max-width: 560px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.simple-mode-header h1 {
+  margin-top: 6px;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+
+.simple-mode-card {
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.simple-mode-card ol {
+  align-self: stretch;
+  text-align: left;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--color-text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.simple-mode-breathing {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.simple-mode-technique-link {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+.simple-mode-active {
+  padding: 40px 28px;
+}
+
+.simple-mode-timer {
+  font-family: 'Fraunces', serif;
+  font-size: 4rem;
+  color: var(--color-primary);
+}
+
+.simple-mode-target {
+  color: var(--color-text-secondary);
+  margin: -8px 0 4px;
+}
+
+.simple-mode-done-text {
+  font-size: 1.05rem;
+}
+
+.simple-mode-rate-prompt {
+  color: var(--color-text-secondary);
+}
+
+.simple-mode-rate-options {
+  display: flex;
+  gap: 10px;
+}
+
+.simple-mode-actions {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .simple-mode-page {
+    padding: 16px;
+  }
+}
