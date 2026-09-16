@@ -1,0 +1,142 @@
+.technique-viewer {
+  padding: 24px 32px 56px;
+  max-width: 780px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.technique-viewer-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.technique-viewer-header h1 {
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+}
+
+.technique-back {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 6px 0;
+}
+
+.technique-canvas-card {
+  height: 360px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 30%, #2a1620, #150a10);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-card);
+}
+
+.technique-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.technique-view-controls,
+.technique-playback-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.technique-view-controls button,
+.technique-playback-controls button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.technique-view-controls button.active,
+.technique-playback-controls button.active {
+  background: linear-gradient(120deg, var(--color-primary), var(--color-peach));
+  border-color: transparent;
+  color: #fff;
+  font-weight: 600;
+}
+
+.technique-play-button {
+  font-size: 1rem !important;
+  min-width: 42px;
+}
+
+.technique-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.technique-info-card {
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--border-soft);
+}
+
+.technique-info-card h2 {
+  font-size: 0.95rem;
+  margin: 0 0 10px;
+}
+
+.technique-info-card ol,
+.technique-info-card ul {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--color-text-secondary);
+  font-size: 0.88rem;
+}
+
+.technique-info-card ol li.is-active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.technique-muscle-list {
+  list-style: none;
+  padding-left: 0 !important;
+}
+
+.technique-muscle-list li {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--color-surface);
+  display: inline-block;
+  margin: 0 6px 6px 0;
+}
+
+.technique-muted {
+  color: var(--color-text-muted);
+}
+
+.technique-start-button {
+  align-self: center;
+  margin-top: 8px;
+}
+
+@media (max-width: 640px) {
+  .technique-viewer {
+    padding: 16px;
+  }
+
+  .technique-canvas-card {
+    height: 280px;
+  }
+}
