@@ -1,0 +1,235 @@
+.bodymap-page {
+  padding: 24px 32px 48px;
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bodymap-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bodymap-subtitle {
+  margin: 10px 0 0;
+  max-width: 46ch;
+  color: var(--color-text-secondary);
+}
+
+.view-toggle {
+  display: flex;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--color-surface);
+  box-shadow: inset 0 0 0 1px var(--border-soft);
+}
+
+.view-toggle button {
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.view-toggle button.active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.bodymap-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.bodymap-silhouette-card {
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-soft);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* react-body-highlighter's own wrapper — themed to sit inside the dark card above. */
+.body-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(45, 10, 31, 0.4) 0%, rgba(58, 21, 38, 0.2) 100%);
+  border: 1px solid rgba(230, 59, 143, 0.15);
+}
+
+/* Smooth transition whenever a muscle's fill changes (selected/unselected). */
+.body-map-container svg polygon {
+  transition: fill 300ms ease, opacity 300ms ease;
+  cursor: pointer;
+}
+
+.body-map-container svg polygon:hover {
+  opacity: 0.85;
+}
+
+.bodymap-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bodymap-reset {
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font-family: inherit;
+}
+
+.bodymap-reset:hover {
+  color: var(--color-accent);
+}
+
+.bodymap-panel {
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-soft);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bodymap-panel h2 {
+  font-size: 1.1rem;
+}
+
+.bodymap-empty {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.bodymap-selected-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bodymap-selected-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 6px 6px 12px;
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.bodymap-selected-list button {
+  border: none;
+  background: var(--color-surface-hover);
+  color: var(--color-text-secondary);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 0.9rem;
+}
+
+.bodymap-cta {
+  width: 100%;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.bodymap-cta:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.bodymap-hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.bodymap-levels {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.bodymap-levels h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin: 0 0 10px;
+}
+
+.bodymap-levels ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bodymap-levels li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font-size: 0.88rem;
+  transition: background 150ms ease;
+}
+
+.bodymap-levels li.is-highlighted {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.bodymap-level-tag {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+@media (max-width: 800px) {
+  .bodymap-page {
+    padding: 16px;
+  }
+
+  .bodymap-layout {
+    grid-template-columns: 1fr;
+  }
+}

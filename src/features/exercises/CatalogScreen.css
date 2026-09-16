@@ -1,0 +1,143 @@
+.catalog-page {
+  padding: 32px;
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.catalog-header h1 {
+  margin-top: 6px;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.catalog-subtitle {
+  color: var(--color-text-secondary);
+  margin: 6px 0 0;
+}
+
+.catalog-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.catalog-search {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  max-width: 320px;
+}
+
+.catalog-category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.catalog-category-chips button {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.catalog-category-chips button.active {
+  background: linear-gradient(120deg, var(--color-primary), var(--color-peach));
+  border-color: transparent;
+  color: #fff;
+  font-weight: 600;
+}
+
+.catalog-equipment-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.catalog-empty {
+  color: var(--color-text-secondary);
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-card);
+}
+
+.catalog-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.catalog-badge {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.catalog-badge--camera {
+  color: var(--color-accent);
+}
+
+.catalog-badge--3d {
+  color: var(--color-peach);
+}
+
+.catalog-card h2 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.catalog-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.86rem;
+  flex: 1;
+}
+
+.catalog-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.catalog-technique-link {
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+  .catalog-page {
+    padding: 16px;
+  }
+}
